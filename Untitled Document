@@ -1,0 +1,9 @@
+>>> from urllib.request import urlretrieve
+>>> urlretrieve('http://dl2.beelody.com/Free/2020/9/This%20Is%20Alan%20Walker%20%282020%29%20%5BBeelody%5D%20128K/01%20The%20Spectre.mp3','aka.mp3')
+('aka.mp3', <http.client.HTTPMessage object at 0x7f251c3dd750>)
+>>> with open('link.txt','r') as f:
+...     for line in f.readlines():
+...             url = line.split('/')[-1]
+...             filename = url.replace("%20"," ")
+...             urlretrieve(line,filename)
+
